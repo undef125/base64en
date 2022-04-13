@@ -1,0 +1,63 @@
+.head{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.head > button, .outputSection > button{
+    margin: auto .3rem;
+    outline: 0;
+    border: 1px solid rgb(92, 164, 71);
+    font-size: 1rem;
+    color: white;
+    padding: .4rem .8rem;
+    cursor: pointer;
+}
+.head > button:hover, .outputSection > button:hover{
+    background-color: rgba(24, 166, 191, 0.527);
+}
+.active{
+    background-color: rgba(24, 166, 191, 0.527);
+}
+.inactive ,.outputSection > button{
+    background: inherit;
+}
+
+.inputHolder{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.input{
+    width: 50%;
+    height: 10rem;
+    outline: none;
+    border-radius: 10px;
+    border: 0px;
+    background: rgba(228, 232, 236, 0.629);
+    resize: none;
+    padding: .5rem;
+}
+
+.outputSection > button {
+    margin-top: 1rem;
+    margin-left: 42vw;
+    width: 10rem;
+}
+.timesTo{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+@media screen and (max-width: 600px){
+    .input{
+        width: 90%;
+        height: 10rem;
+    }
+    .outputSection > button {
+        margin-top: 1rem;
+        margin-left: 30vw;
+        width: 10rem;
+    }    
+}
