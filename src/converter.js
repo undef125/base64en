@@ -48,6 +48,8 @@ function ButtonTimes({ times, settime }) {
                 type="number"
                 name="times"
                 id=""
+                min="1"
+                max="30"
                 value={times}
                 onChange={(e) => settime(e.target.value)}
             />
@@ -58,6 +60,10 @@ function ButtonTimes({ times, settime }) {
 function OutputBox({ setinp, inputt, activeStat, timeto }) {
     let i = 0;
     const loop = () => {
+        if(timeto > 30) {
+            alert("Maximum is 30 times!!");
+            return;
+        } else {
         let result = inputt;
         for (i = 0; i < timeto; i++) {
             if (activeStat) {
@@ -71,6 +77,7 @@ function OutputBox({ setinp, inputt, activeStat, timeto }) {
             }
         }
         return result;
+    }
     };
     return (
         <div className="outputSection">
